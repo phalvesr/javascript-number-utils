@@ -6,28 +6,28 @@ Number.__proto__.getFibonacciNumbersLessThanOrEqualsTo = function(value) {
   
   value = parseInt(value);
 
-    if (value <= 0 || Number.isNaN(value)) return NaN;
-    if (value === 1) return [1];
+  if (value <= 0 || Number.isNaN(value)) return NaN;
+  if (value === 1) return [1];
 
-    const fibonacciNumbers = [1, 1];
-    let lastFibonacciNumber = 0;
-    let index = 1;
+  const fibonacciNumbers = [1, 1];
+  let lastFibonacciNumber = 0;
+  let index = 1;
 
-    while (lastFibonacciNumber <= value) {
+  while (lastFibonacciNumber <= value) {
 
-      const next = fibonacciNumbers[index] + fibonacciNumbers[index - 1];
-      index++;
+    const next = fibonacciNumbers[index] + fibonacciNumbers[index - 1];
+    index++;
 
-      if (next > value) {
-        break;
-      }
-      
-      fibonacciNumbers.push(next);
-
-      lastFibonacciNumber = next;
+    if (next > value) {
+      break;
     }
 
-    return fibonacciNumbers;
+    fibonacciNumbers.push(next);
+
+    lastFibonacciNumber = next;
+  }
+
+  return fibonacciNumbers;
 }
 ```
 #### getFibonacciNumbersLessThanOrEqualsTo() usage example:
