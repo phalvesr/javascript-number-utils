@@ -30,3 +30,15 @@ Number.__proto__.getFibonacciNumbersLessThanOrEqualsTo = function(number) {
     return fibonacciNumbers;
 }
 ```
+#### getFibonacciNumbersLessThanOrEqualsTo() usage example:
+```
+const fibonacciNumbersLessThanOrEqualsToSeven = Number.getFibonacciNumbersLessThanOrEqualsTo(7);
+const returnsNotANumber = Number.getFibonacciNumbersLessThanOrEqualsTo(-1);
+
+console.log(fibonacciNumbersLessThanOrEqualsToSeven);
+console.log(returnsNotANumber);
+
+// OUTPUT:
+// [ 1, 1, 2, 3, 5 ]
+// NaN
+```
