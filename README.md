@@ -2,23 +2,23 @@
 
 #### Get Fibonacci numbers
 ```
-Number.__proto__.getFibonacciNumbersLessThanOrEqualsTo = function(number) {
+Number.__proto__.getFibonacciNumbersLessThanOrEqualsTo = function(value) {
   
-  number = parseInt(number);
+  value = parseInt(value);
 
-    if (number <= 0) return NaN;
-    if (number === 1) return [1];
+    if (value <= 0 || Number.isNaN(value)) return NaN;
+    if (value === 1) return [1];
 
     const fibonacciNumbers = [1, 1];
     let lastFibonacciNumber = 0;
     let index = 1;
 
-    while (lastFibonacciNumber <= number) {
+    while (lastFibonacciNumber <= value) {
 
       const next = fibonacciNumbers[index] + fibonacciNumbers[index - 1];
       index++;
 
-      if (next > number) {
+      if (next > value) {
         break;
       }
       
